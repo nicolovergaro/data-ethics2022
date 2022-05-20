@@ -1,0 +1,226 @@
+\section{Data ethics (Vetrò)}
+\subsection{Premises}
+Some people say that data is the new oil. While this can be considered true, expectations were inflated. We live in a time where data is in fact exponentially growing and more companies decide to take data driven decisions, especially banking and insurance companies. This is bringing us to the next industrial revolution.
+
+Some definitions:
+\begin{itemize}
+    \item Cyber-physical sytems: based on networked embedded software systems, which connect computational entities with physical entities to achieve an overall purpose.
+    \item Smart agent: basic element of an AI system or smart system. It perceives and acts in an environment. The agent function specifies the action taken by the agent in response to any percept sequence. How well is the behaviour is defined by the performance measure, which evaluates the behaviour of the agent to decide if the agent is rational and which actions maximize the performance value. An agent usually has sensors through which it receives data that is given as input in an algorithm. The algorithm decides the actions to perform through actuators. In socio technical systems actuators make actions on people. (telepass system). 
+\end{itemize}
+We can say that technologies are tied to society, but our perspective is on inequalities, in particular we want to analyze if technology preserves, reduces or enhances existing inequalities in society.
+
+Why data ethics?
+We won't focus only on law but also on ethics. The next question we will ask is: what is ethics? It's a branch of philosophy, which is used to understand what is good and what is bad, not what's right and wrong. In our context it deals with decisions taken by machines and to the principles that we refer to in order to understand if those decisions are acceptable from individual and society point of view.
+
+In our course we focus on certain aspects of ethics. In a study of 2016 the philosopher Floridi and other colleagues mapped the debate on ethics of algorithms. Most of the issues were about:
+\begin{itemize}
+    \item inconclusive evidence, inscrutable evidence, misguided evidence: the data we are using to train algorithms are not good enough, we can't look at the data or data can be wrong. 
+    \item unfair outcomes, transformative effects: data is used to obtain an outcome which will trigger and motivate actions that may not be ethically natural.
+    \item traceability: who is responsible for decisions taken? designer, programmer, manager?
+\end{itemize}
+We will mostly focus on unfair outcomes and transformative effects.
+
+\subsubsection{Introduction to data ethics}
+Automated decision making systems (ADM), in our socio-technical perspective are not only algorithms that define the rules, but also the model, the data that is used, and the context they are embedded in. All these elements must be taken into account. Algorithmic systems are not ADM, but they are a part of it.
+
+ADM systems learn from data and to have a good behaviour, data should be:
+\begin{itemize}
+    \item sufficiently large;
+    \item sufficiently heterogeneous;
+    \item labelled with the "right" answers (but we don't know who labels data);
+\end{itemize}
+Learning by examples is an inductive process. There are three types of inferences:
+\begin{itemize}
+    \item Deductive \footnote{Christmas is always Dec. 25th; today is Dec. 25th, therefore it’s Christmas. The prefix de- means "from," and deduction derives \textit{from} generally accepted statements or facts}: you make rules (general or universal premises) and make inferences based on rules. Can't go against rules. 
+    \item Abductive \footnote{A detective's identification of a criminal by piecing together evidence at a crime scene. Abduction will lead to the best explanation. The prefix ab- means "away," and you take \textit{away} the best explanation in abduction}: deals with our reasoning and how we put elements together. I can observe reality, make reasoning and then make inferences. 
+    \item Inductive \footnote{At lunch you observe 4 of your 6 coworkers ordering the same sandwich. You induce that the sandwich is probably good. Your reasoning is based on an observation as opposed to universal premises. The prefix in- means "to" or "toward," and induction leads you \textit{to} a generalization}: machine learning models. Start from data and find patterns, then make inferences. 
+\end{itemize}
+Abductive and inductive share properties: conclusion goes beyond premises and we can can still make conclusions with a subset of the premises.
+
+When modelling there are some potential problems in the use of historical series:
+\begin{itemize}
+    \item reality is a super set of what is measurable (low hanging fruit).
+    \item some aspects of society are measurable only indirectly.
+    \item societies have historical and structural inequalities reflected by the data.
+    \item spurious correlation in the data can often be found.
+\end{itemize}
+Example: demographic disparities. e-commerce company analyzes historical data of online purchases and demographic data to decide where to enable fast delivery services. After the analysis it turned out that fast delivery were offered where people were prevalently white. The source code of the algorithm and the dataset were not publicly available. The effect was a discrimination based on skin color.\\
+Example: COMPAS case. system to decide whether to keep a person in prison or decide other ways to be punished after a problem with the justice. COMPAS outputs low, medium or high risk of recidivism. The impact was a systematic discrimination towards a specific ethnic group. The source code and the data are not publicly available because it's a private company, but it's used by a public body.
+
+There are private IT companies that have a higher market capitalization than the GDP of states like Canada, Italy, etc. This could create a problem because they have a lot of power but they are private. They don't have the same accountability measures as public entities, this can be a problem for decisions that impact the society. Another fact is that in the largest companies Europe is not present, can't be competitive with USA and China. 
+An example of their power is the contact tracing mechanisms in which Google and Apple decided how to perform it and all the world had to adapt.
+
+There are also many examples of biases in the data, such as:
+\begin{itemize}
+    \item A research of the word "CEO" leads to mostly images of men, while the word "nurse" leads to women.
+    \item Toxicity score of the same sentence is worse if instead of "French" there is "Black man".
+\end{itemize}
+We investigate the relationship between technology and society and whether the inequalities in society are amplified by technology. As reference point we can take art.21 of the EU charter of fundamental rights, in which is stated that any discrimination of any nature is prohibited.
+
+\subsubsection{Demographic disparities in the loop}
+The loop is the machine learning loop, where the data of the individual makes the state of the world, that is the description of a phenomena. Through measurements it becomes data, which is fed to an algorithm that take decisions on individuals; this closes the loop. If individuals change their behaviour after they received an action from the model this might cause changes in the model. 
+
+State of the world: disproportions and inequalities are common in our societies, for example certain groups may be concentrated in certain areas of the city/region; certain groups have a different way to use technology that changes by age, ethnic groups, etc. 
+
+The matrix of domination/oppression is a sociological paradigm that explains issues of oppression with with race, class, gender, sexual orientation, religion, or age. These can be seen as the main drivers for inequalities. The dominant group is a Men, anglo/american, rich, educated, able, english, young and heterosexual. We can take this as a good reference and examples seem to support this. For example, the airport scan. Some people don't identify with their biological sex and this brought dysaffordances, which is what technology prevents you from doing. In the example a dysaffordance is the selection of sex from a static form.
+
+We now move from the state of the world to the measurement process that gives us data. In the example regarding over and under representation in universities, the category "multi racial" was introduced in 2008, so what happened before? We can't trust the part of data before 2008. 
+
+In the measurement process we bind a number to an entity. Usually we say that data is objective, but that's not entirely true, since in the measurement process many subjective choices have to be made.
+
+Example: rewarding system for developers. The company decided to use the number of lines written,  the defects fixed and the number of hours. This brought some problems such as:
+\begin{itemize}
+    \item some languages are more verbose than others;
+    \item time spent of related activities is not taken into consideration;
+    \item reflexivity problem: The more any quantitative indicator is used for decision-making about people, the more it will be subject to the pressures of corruption. For example a researcher will push its research as soon as possible because of an indicator to meet constraints.
+    \item Goodhart's law: When a measure becomes a target, it ceases to be a good measure
+\end{itemize}
+
+Follow up example: the company decides to reward a group instead of an individual. In this case they use the average productivity and two managers rewards two different groups, because of the different way the calculations are done (defects solved per hour versus hours to solve a defect). This is caused by Simpson's paradox, for which if f is not linear, $E[f(x)] \neq f(E[x])$.
+
+Now we move from data to the model, analyzing the learning process, which can be dangerous because if data is biased it will enter the model. Examples are Google translate which translate from languages that have a single pronoun for he/she/it that has a bias.
+
+To analyze the last part of the cycle we introduce the field of predictive policy, with which we try to predict where and when the next crime will happen to try to allocate police forces better. They tried to model the behaviour of people by analyzing historical data about arrests, this is an epistemic approach\footnote{if it happened in the past it will happen in the future}. The problem is that people are not that predictable and also change over time. Another problem is that they used general trends to predict individual behaviours. This led police to "expect" a crime and to act consequently, by for example performing arrests where the software predicted crimes would happen. Using arrest data (biased) also brought more black people to be stopped, while medical data show that the distribution of race is mostly uniform. 
+
+Finally, the \textit{feedback loop} problem. If you keep feeding the algorithm using data from the algorithm itself, you keep arresting the same people. Same effect in social media, which creates an "echo chamber" by reinforcing the same patterns.
+
+To conclude, optimization algorithms define thresholds. By changing the threshold you can have a different impact on different people. A famous example of using general trends and applying it to an individual is the Raffray-Calment story
+
+\subsection{Case study: The COMPAS case}
+The COMPAS\footnote{Correctional Offender Management Profiling for Alternative Sanctions} system is used in some U.S. court systems to estimate the probability of recidivism of a convicted offender.
+COMPAS brought systematic discrimination towards black people. In fact there are example of black people being classified as "high risk" who committed minor crimes, while white people being classified  as "low risk" and committed more serious crimes. False positive rate (high risk but didn't re-offend) is higher for African-Americans while false negative rate (low risk but re-offended) is higher for white people.
+
+\subsection{Case study: the Facebook advertising platform}
+We will look at a scientific study that shows empirically the discrimination problem in advertisement in Facebook. Then we will see the actual case of HUD vs. Facebook. The case doesn't use data from the study. Let's start from the findings of the paper.
+\subsubsection{Research}
+How did it work at time of the research? There are 5 elements in an ad:
+\begin{enumerate}
+    \item Headline
+    \item Image/video
+    \item Domain 
+    \item Title
+    \item Description
+\end{enumerate}
+3,4 and 5 are automatically pulled from the website you will visit if you click on the ad. There are 2 separated phases:
+\begin{enumerate}
+    \item The advertiser creates the ad and decides: which content to advertise, which users should see the ad (targeting) and finally the bidding strategy.
+    \item Ad is delivered to people. In this phase the advertiser has no control.
+\end{enumerate} 
+Now let's see the effects analyzed by the paper. We want to know if one of these has an effect on the type of audience, regardless of the audience selected in the previous phases.
+\begin{enumerate}
+    \item Budget
+    \item Ad creative
+    \item Ad image
+    \item Ad image classification: performed by the platform.
+    \item Test on real-world ads: in the previous steps the ads were fake to test those aspects. This was done because researchers wanted to test if the platform inserted other constraints on the definition of the audience. The defence of Facebook was that the platform was neutral.
+\end{enumerate}
+Four specific regions in North Carolina for demographics reasons, the first two target white people, while the second two target black people.
+
+The first experiment was to check if the budget had an effect on the percentage of males who saw the ad. The higher the budget the lower the percentage of men.
+
+The second experiment was about Ad creative. Different combinations of Ad component and topics (body building, cosmetics) were tried. They checked the percentage of male audience. The amount of budget was fixed. Researchers found that when an image is inserted there is a significant discrepancy in fraction of men for cosmetics and bodybuilding. So the platform intervened.
+
+The third experiment focused on the image. The topics were the same from before but the image was tested in two scenarios, with the correct image or with a swapped image (e.g cosmetic image when the topic was bodybuilding). In this case they found that the platform classified the image and targeted different people regardless of the topic.
+
+Next they tried to vary the level of stereotype and three levels of image: Visible, blank and invisible (invisible to human eye but is there with a filter). What they found is that even when the image is invisible the platform suggested it with male or female audiences.
+
+The final test is on real word ads and they designed three types of ads:
+\begin{itemize}
+    \item music type: they checked the percentage of white people. It was found that there was a relationship between the genre and the percentage of white men in the audience targeted.
+    \item employment offers: they tried different job titles and different images. They checked on the percentage of men and white users. We can notice large differences for secretary and in particular when there are black people.
+    \item housing offers: they tried different type of property, cost and black/white/no family as image. They checked for white users and men users.
+\end{itemize}
+\subsubsection{HUD v Facebook}
+Until 2020 you could select the ethnic group which was declared or inferred. Now there is the African-American culture because Facebook was charged by the Department of housing and urban. In particular this document (which didn't use data from the previous studies) focuses on the housing market. The \textbf{premises} are that you can't discriminate by race, sexual orientation, sex, nation, etc regarding housing for renting, selling, or accessing the market to certain people. The \textbf{factual allegations} are that Facebook was paid by customers to show the ads to difference kind of audiences which could be customized in a discriminating way, for example by ethnic group, zip code, sex etc. Facebook also created its "actual audience" by using an algorithm. The advertiser could not "broadcast" the message but had to select an audience. Also Facebook charged differently to show the same ad to a different group of people. All this behaviour is because. The \textbf{legal allegations} are that Facebook discriminated by making dwellings unavailable, refused to publish advertisements, denied information about dwellings, charged differently for advertisements; all based on race, color, sex, etc. This trial is still ongoing and if Facebook loses the case, all employees must attend a training on the Fair Housing's Act about advertisements and obviously pay to all damaged people.
+\subsubsection{Algorithmic Accountability Act of 2019}
+\textit{This is not a law}.In this act it was defined an \textbf{automated decision system} and its \textbf{impact assessment} based on the description of the system, design, training data. Also it should contain the benefits and costs of the system in terms of data minimization, storage time or what information are available to the public. It should also contain an assessment of the risks to privacy or security of personal information and what are the measures taken to mitigate the risks. It was also given the definition of a \textbf{covered entity}, which are the entities that this act refers to, that are entities having more than \$50mil annual gross receipts or that had information about 1mil users/1 mil devices, that are controlled by corporations falling in the two previous categories, or that are data brokers. If a company is a covered entity then it must provide an impact assessment prior to implementation.
+\subsubsection{Local law of the city of New York}
+\textit{This law passed and is effective.} It is a law about the use of automated employment decision tools. It was defined the \textbf{bias audit} as an impartial evaluation from an independent auditor, which is mandatory. Should assess the impact of the tool on people. This law affirms that the city should not use any automated employment tool unless it was certified with an audit less than a year prior, or also if the results of the audit are public on a website.
+\subsubsection{Banning Surveillance Advertising Act of 2022}
+\textit{This is an ongoing act.} To prohibit targeted advertising. You can't use personal data to make targeted ads.
+\subsection{Formalization of Algorithmic Fairness}
+FOR THE EXAM, STUDY TABLES AND HOW TO COMPUTE FAIRNESS VALUES!!!
+When we talk about \textbf{fairness criteria} we deal with the impact of an algorithm, especially we try to understand whether the impact is a \textit{disparity impact}, which means that outcomes are different for a specific social group identified by a protected attribute\footnote{also sensitive attribute: attributes that shouldn't be linkable to an individual e.g sex, race, sexual orientation, etc.}.
+The fairness measures we will see are:
+\begin{itemize}
+    \item Independence: classification should be independent from the sensitive attribute:
+    $$
+        R \perp A: P[R=1|A=a] = P[R=1|A=b]
+    $$
+    Can also introduce a tolerance, given that obtaining two exactly equal probabilities is difficult. In the COMPAS case, independence given African American is 0.58, while it's 0.33 with Caucasian. We can achieve independence:
+    \begin{itemize}
+        \item Pre processing: removing proxy variables or balancing the dataset.
+        \item At training time: tweaking details of optimization process.
+        \item Post processing: adjust the classifier and try to make the classifier uncorrelated with the sensitive variable.
+    \end{itemize}
+    Independence can be applied at any stage but it ignores the correlation between Y and A. Also can bring a really low accuracy for one of the groups and to exchange false positive for false negatives.
+    \item Separation: requires independence from the protected attribute but conditional on the target attribute:
+    $$
+        R \perp A | Y: P[R=1|Y=1, A=a] = P[R=1|Y=1, A=b]
+    $$
+    And the same for $Y=0$, so the false positive and false negative rate is the same for all the values of the protected attribute. If the classifier is not binary it should hold for all levels. We can introduce a tolerance also in this case. 
+    In COMPAS we had for false positives 0.22 for Caucasian, 0.42 for African American (advantage for African American) and for false negative 0.5 Caucasian, 0.28 African American (advantage for Caucasian). It can be obtained at training by ad-hoc optimization, or in post processing at the intersection of the ROC curve. Separation takes into account the target variable but is much more difficult to apply and doesn't take into considerations false negatives.
+    \item Sufficiency: the target variable should be independent from the protected attribute given the classification:
+    $$
+        Y \perp A | R: P[Y=1|R=r, A=a] = P[Y=1|R=r, A=b]
+    $$
+    This is equivalent to \textit{calibration}. 
+    In COMPAS positive predictive value Caucasian=0.59, AM: 0.65, while negative predictive value Caucasian=0.29, AM: 0.35. These scores are pretty similar.
+\end{itemize}
+Fairness criteria, taken in pairs, are mutually exclusive. Case by case we should take into account different fairness criteria. If we look at data based on age we can see that percentages among recidivists, low and high risk are different, so how should we act? It's difficult because going to prison might be difficult for an older person, while for a young person the young age is important also in the change of behaviour. Finally, a study compared COMPAS predictions to human predictions with no or little expertise on criminal justice. The results were very similar but in this case it's better to use a machine because it saves money.
+\subsection{Algorithmic Fairness: some reflections}
+\subsubsection{Reflection \#1: Fairness and discrimination}
+If we take fairness as absence of discrimination we should apply the same treatment to all people based on their characteristics. Characteristics:
+\begin{itemize}
+    \item Intrinsic or acquired: based on your own characteristics that you have by birth (ethnic group, place of birth) vs acquired: job, city where you live,..
+    \item absolute vs context-dependent.
+    \item permanent vs temporary.
+\end{itemize}
+There are different types of discrimination, which are:
+\begin{itemize}
+    \item Direct: the personal traits will result in a non favorable outcome. Similar to disparate treatment. Commonly seen in computer science as protected attributes. These are sex, race, color, religion,.. Protected attributes are specified in EU Primary/Secondary laws and also in the US with domains that protect special social groups (Equal Credit Opportunity Act, Fair Housing Act). Most of these are results of Martin LK's work.
+    \item Indirect: discrimination based on proxy attributes, for example zip code in the Amazon case. Similar to disparate impact.
+    \item Systemic: discrimination is embedded in the social norms of the culture, for example employers that prefer candidates that share similar experiences or that come from the same region. 
+    \item Statistical: decisions are based upon average group statistics to judge an individual belonging to that group (similar to Raffray-Calment story)
+    \item Explainable: discrimination happen and you can explain why, for example higher annual income of men with respect to men. This can be explained as difference in worked hours, maternity. The fact that the discrimination is explainable can still make it illegal.
+    \item Not explainable: discrimination happen but you can't explain why. facebook case.
+\end{itemize}
+To understand a discrimination we should understand:
+\begin{itemize}
+    \item Nature: what is the harm and who does it afect?
+    \item Severity: for each affected person, how severe is the harm?
+    \item Significance: how many people are disadvantaged and what is the level of disadvantage? With algorithmic fairness we can make inferences on significance.
+\end{itemize}
+\subsubsection{Reflection \#2: No universal mathematical formalization of fairness exists}
+This is also known as impossibility of fairness. In this course we dealt with \textbf{group fairness}, based on social groups. We also have \textbf{individual fairness}, which means that similar individuals should get similar predictions. Finally, there is also \textbf{subgroup fairness}. 
+
+We will see individual fairness and alternative of group fairness.
+In particular, for individual fairness:
+\begin{itemize}
+    \item Fairness through awareness: any pair of similar individual should receive a similar outcome. Depends on the task, the similarity measure and the outcome threshold.
+    \item Fairness through unawareness: you don't use protected attributes but we know that discrimination is possible for proxy attributes.
+    \item Counterfactual fairness: you compare results between the same instance when you change the value of the protected attribute. You measure how many instances have a different classification. This can be done with alternating functions. Counterfactual because you have to imagine a world where the same individual belongs to a different group.
+\end{itemize}
+Regarding group fairness, we already saw Independence, Separation and Sufficiency. Examples of alternative measures are:
+\begin{itemize}
+    \item Treatment equality: ratio of false negative and false positives and check that they are the same for all the protected group categories.
+    \item Fairness in relational domains: not only protected attributes but also social or organizational aspects, for example sex and place of birth. 
+    \item Conditional statistical parity: you don't take protected attributes but a set of factors.
+\end{itemize}
+\subsubsection{Reflection \#3: Mathematical notions of fairness apply only to observational data}
+\subsubsection{Reflection \#4: Fairness as Justice: equity, equality, need}
+Now we use the concept of fairness in terms of justice. Justice is an immense field, we refer to justice as adherence to law or as equality. If we focus on the equality notion, we have two categories:
+\begin{itemize}
+    \item Context of giving and receiving: typically characterized by bilateral relationship. If I provoke I damage I should pay. Notions of equivalence between things. Regards exchanges. \item Field of assigning advantages,disadvantages: multilateral and unidirectional, where you have a body that assigns benefits or obligations. Equivalence between persons, not things and values. Regards relationships of coexistence. Attributive justice (how much should I expect from a given group)
+\end{itemize}
+One of the founding principle is the concept of equality of opportunities: everyone should have the same starting conditions. Equals are treated equally. The situation is not linear, there are three paradigms of distributive justice:
+\begin{itemize}
+    \item Equality: outcomes are allocated equally.
+    \item Equity: outcomes are allocated according to contributions.
+    \item Need: outcomes are allocated according to needs.
+\end{itemize}
+They should be chosen by the situation. 
+\subsubsection{Reflection \#4: From values to decision making}
+What are the principles and the values that you follow when you choose one paradigm or the other? Usually values shape the rules that are then implemented. For example assigning or denying loans could be decided by different underlying values, for example safeguard of lender's capital, effect on environment, etc. Then they determine what are the rules, for example to safeguard the lender's capital, you could take a debt/income less than x\%, or value or properties already owned by him or relatives. Finally the rules are implemented.
+
+FOR THE EXAM, explain why a discrimination occurs or what are the risk factors. could you imagine a different goal for the algorithm? for example for compas case, it could be used for policy makers, where arrests/criminality is a problem.

@@ -1,0 +1,278 @@
+\section{Data Etichs (Mantelero)}
+\subsection{Case 1}
+In Netherlands the police department tried to implement a system in order to control how the people interact in several part of the city. To do that they used a group of sensors that would track you if you passed near them. Each device had an unique identifier and this could be used to identify a person. The problem was that if you put together all the signals you could track different persons and also group of people. For this reason the SA decided to give a penalty to the police department.\\
+The main problem of this system were:
+\begin{itemize}
+    \item minimization: they collect more data than really needed.
+    \item lack of information: they didn't inform that the system could track the people.
+    \item risk to the fundamental right: they didn't use these data to track the people, but they potentially could, so it is a risk.
+    \item anonymization: data were notanonymized.
+\end{itemize}
+With this case a new problem arose, that is the availability of a huge amount of data that could be used to track people, but more importantly groups of people. This is the problem of the \textbf{collective use of data}, so if a group were moving in the same way, for example to protest, they could track them even before they started protesting, because they knew that a lot of people were moving together.
+
+\subsection{Case 2}
+In this case we have two main problems: the training set and the face recognition.
+The first because because they took online data by scraping content of the web, wrongly thinking that all online data is public and therefore can be used for any purpose by anyone.
+The second problem was that face recognition is very invasive and they didn't consider a risk assessment.
+
+\subsection{Case 3}
+In this case the main problem is bias. The purpose of the insurance company was to create a model that could predict the price based on the driving of the person. To train their model, the insurance company gave a sensor to all people who willingly accepted (not a problem), in exchange for a discount on the insurance price (verify). The model learned that the people who had to pay more for the insurance were the ones who drove at night, because it means that probably you are coming back home after a party and so you have a higher chance to a crash. 
+The problem was that they didn't consider that someone can work during the night so they had to pay more only because the dataset was biased.
+
+Here we can say that we have a problem of design.
+
+\subsection{The challenges of the AI and the myths of data protection}
+\begin{enumerate}
+    \item \textbf{Consent}: Regarding consent we have a broad notion, in fact all contracts are a sort of consent. 
+    
+    In words, I give you my consent and my data only if the use is good. Since I can decide, before giving the consent I can make a mini risk assessment and I evaluate also if the company is a good company that can protect or not my data. 
+    
+    Often we grant our data in order to obtain benefits like with the fidelity card, in that case we indeed obtain some special price.
+    \item \textbf{Paradigm shift}
+    \begin{itemize}
+        \item \textbf{Datafication}: nowadays everything is transformed into data. We are aware of it because we use the smartphone every day and each movement is transformed into data.
+        \item Concentration of power:
+        \begin{itemize}
+            \item \textbf{Data Gatherer}: who collect the data, that is who is the "owner" (not really because we are the owner of our data). They have a lot of power because they have all the data but we don't really know who they are. We think that the only companies with our data are Google or other big companies, but there are a lot of companies in the middle of the process that have access to our data (data intermediates).
+            \item \textbf{Data Intermediates}: they use our data to conduct some part of the process.
+            \item \textbf{Data Merchant}: companies that earn money through our data. 
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Open data}: The third point is related to data that is available online. To extract information from open data you must have money, but not all companies have this resources. So this is not a good way to balance the power, in fact we can think that open data increases it to the company that already has power.
+    \item \textbf{Bound between private and public}: the role of consent is more complicated because public entities use their power for the general interest (legal ground). But many times there is a deal between public and private so we can have some problems.
+\end{enumerate}
+
+\subsection{Group dimension}
+Other aspects related to challenges created by AI with regard to the traditional data protection principle related to consent is \textbf{group dimension}. Two aspects that should be highlighted are:
+\begin{itemize}
+    \item in many cases the interest of who collect data is not about a specific individual but about the fact that a person is part of a specific group; so the individual profile is not the main element. The main element is how to build the category and deciding in a dynamic way to which category a person belongs.
+    \item categories are dynamic, which is something new. Before categories were static and created from gender, ethnicity, religion, political beliefs, etc. Also, you could know your category and other people in the same category. This could create a social impact in the category, for example because of discrimination, and react to change the law. 
+\end{itemize}
+With the categorical approach of AI everything is dynamic, new categories are created by AI based on the data they area processing (e.g the category of "financially challenged", based on low incomes, low savings, not loyal to financial institutions,etc.). Based on this new classes discrimination can still happen but people don't know that they belong to this class, don't know other people in the same category and the classification itself can change since people are dynamically assigned.
+
+\subsubsection{Predictable specific purpose}
+In the past the fundamental idea behind the consent was that you could decide based on the purpose of the company. Now we have some problems related to the AI because the purposes are not so clear. The AI extracts information in order to make a decision. In most of the cases we know the general purpose but not the specific purpose. An example could be the traffic, in which the general idea is control the passage of the car, but the system could also be exploited to extract other information. The problem now is how to ask and give the consent, so the scholar suggest two kind of solutions:
+\begin{itemize}
+    \item \textbf{Dynamic consent}: ask the consent every time something change. The downside is that people will tend not to read and lose trust in the company.
+    \item \textbf{Broad consent}: don't ask the consent for the specific purpose but for a general purpose, but in this way the company can do anything they want.
+\end{itemize}
+
+\subsubsection{Data minimization and risk assessment}
+The logic of data scientists using AI application is having as much data as possible. \textbf{Data minimization} in the case of using large scale data means focusing on what is strictly necessary by increasing the quality of data and not use data just because it's available.
+We already discussed the \textbf{risk assessment} and we saw that it is focused on the processing without taking into considerations the impact that an AI can have on the people. But in AI the problem is not related to data protection but on the possibility to have new discrimination, risks the right of free movement etc...
+The last point is that the impact assessment is affected by a limited enforcement because in many cases the supervising authority has not much power to check the impact assessments.
+In many cases the company says that they can manage the risk but it's not always true. This prevents them to not have inspections and many years can pass before knowing that data were treated with risks.
+
+\subsection{From data protection to human rights}
+AI focuses on a mathematical and statistical approach. For example, in the Amazon case for recruitment, even if the gender information was removed the AI still preferred male CVs with respect to women ones. This because many males had as likes "football". Machines used mathematics, unlike humans, so it just looked at the features. For this reason, \textit{machine reasoning is not the same as human reasoning}. Although humans can be biased by emotions, this may affect a limited number of decisions, while a bias in the machine can affect all decisions.
+
+\subsection{Regulating AI}
+At the moment there is no regulation about AIs. This can make it look like AIs are out of the scope of the law, but this is not true since we can use other laws and apply them to each case by similarity, so we can just modify existing rules instead of creating new ones. There are many issues:
+\subsubsection{New spring of AI}
+What should we regulate? Specific or general AIs?
+
+What is an AI? This is difficult and at the same time a risk, because I fix now its definition but this is a field that is always evolving. Also by defining an AI we undirectly limit the scope of regulation, because we limit scope with a limited definition. 
+
+Another issue is to distinguish between general AIs and automated decision making systems.
+
+Furthermore, there is the problem of giving a \textbf{legal personality} to AIs or not. A legal personality is an entity that can act as a natural person. Not everything can be a legal personality because of potential abuses but most importantly because of uncertainty. We need a path for the creation of this kind of legal personalities, in fact, if for example a municipality decides to create 10 AIs, it would need a legal person for each AI. In the case one of them fails who pays for the damage? The administration should pay even if the "legal personality" of the AI failed. So this could be a solution for this issue, that is that \textit{if someone creates/uses an AI, he/she is liable for that}.
+
+\subsubsection{Transparency}
+If we want to create a regulation on AI, what are the key elements?
+The first one is transparency. This could create a better environment for the trustworthy AI (which we will talk about later). 
+Transparency is important because complexity makes it more difficult to understand it, deal with it and to provide adequate safeguards for the individual. If transparency is increased we can have more information about the system, for example we can detect bias or know the impact on the individual. At the same time, one thing is to define the list of key principles, another is to define exactly what it means and the implementation of transparency, since there are many ways to implement it. An example could be being transparent about the logic of the algorithm, like having information about the change in the output according to the change in the input. This could still be an issue because you could know the relationship but users can still do nothing about it or know why the algorithm decides that (if a loan is based on how much you earn you don't have much room for improvement, also in the Amazon example you know that an interest in football puts you in a better position for recruitement, but why?). 
+
+Another issue is who is the target of transparency, because many users don't care about transparency like they don't care about data protection.
+
+If there is transparency you can detect if there is a problem, but this is just a mean, it's not the end of the problem. We need transparency because otherwise we couldn't start an investigation and make a risk assessment.
+
+\subsubsection{Risks of AI}
+\begin{itemize}
+    \item Bias: not only the bias in the dataset, but we can find other biases such as:
+    \begin{itemize}
+        \item methodology: the way in which you frame the problem (street bump case or insurance company case).
+        \item sources of data: quality can be good but miss some sources.
+        \item data scientist: the data scientist itself may be affected by the \textit{confirmation bias}, so the algorithm is shaped in line with the data scientist's expectations.
+    \end{itemize}
+    \item Decontextualization: reuse of both data and model. 
+    \begin{itemize}
+        \item Data, because we might not have a lot of data, so we use the same data for another purpose. An example can be facial recognition.
+        \item Model, for example use an algorithm that predicts the propagation of earthquakes with the propagation of crime, because they may be similar.
+    \end{itemize}
+     
+    \item comparison between human and machine decision: discussed before.
+      
+\end{itemize}
+
+\subsubsection{To regulate or not to regulate?}
+People in favor say that AI impacts on society and individuals because it's used for decision making and can discriminate. People not in favor say that existing laws are enough, but as we saw this is not true. 
+AI creates new issues and existing laws don't provide enough certainties, so the suggestion is to regulate. In regulating we don't have to reinvent the wheel, but we need to regulate only those elements not covered by the law, to fill the gap. The same applies for human rights, since we don't have to provide new definitions because they are already defined.
+
+There are new challenges such as:
+\begin{itemize}
+    \item collective dimension, because we have new categories that affect groups of people.
+    \item liability of AI, because AIs learn from users, so who is liable, the algorithm or the user?
+\end{itemize}
+
+The last point is how to regulate, because we can use \textbf{hard laws} (from the state, top down, effective) or \textbf{soft laws} (self regulations, bottom up, more flexible).
+
+\subsubsection{Key issue}
+We will start this topic with an example that concerns the difference between publisher and editor in terms of liability. Before internet only the editor could be liable because she/he controls the content and so the data, while the publisher just prints what the editor decides. Now we have some more problems, for example, is an ISP (Internet service provider) a publisher or an editor? It tries to remain a publisher because in this way they are not liable, but if you exercise control on the content (for example by moderation) you are an editor, so you are liable. This was a paradox because if you exercise control to make the content better you are liable, but if you don't exercise control you are not liable. New laws were introduced (decency act) because there weren't laws that could have been extended in order to find a solution. So, the possible ways to "adjust" a lack in the law are:
+\begin{itemize}
+    \item Interpretation of preceding laws
+    \item New piece of law
+    \item New law
+    \item Extend the old laws
+\end{itemize}
+The problem is how to find a lack in the law. Normally when we find an infringement we go to the court and they must find a solution even if there exist no law for that case. The problem is that the solution found is valid only in that particular case and next similar cases are still subject to interpretation. Since the court can't write new laws, after this process the legislator can create a regulation to create a uniform answer for future cases.
+
+In the case of GDPR, it was built on a previous directive that was adapted with the advent of big data and data science (we can say that GDPR is the fourth generation of data protection law). It was more of a reshaping of a previous framework. Regarding the regularization of AI we don't have any pre-existing frameworks. As already said, the main question is to regulate or not regulate? More specifically, what AI should be regulated? We can also ask what is the regulation for:
+\begin{itemize}
+    \item liability: if there is a damage the law decides how to channel the damage, so who has to pay. Not focused on standard of security of human rights but just about allocation of liability.
+    \item security: focusing on how to prevent damages. Creating a system that introduces constraints, standard and procedures. This is called \textbf{conformity}, which means that AIs can't be freely created, but it has to conform to criteria.
+    \item human rights: introduce something about the negative impact on human rights and not in terms of security. For example with mass surveillance there is not a problem of security but rather of freedom of movement, of speech, etc.
+\end{itemize}
+
+Introducing a new piece of law should be done carefully, because it should be consistent and coherent with the context and existing laws. 
+Right now in the AI act the proposal is to create a complementary independent body to focus on product security approach, to supervise about standards and procedures. This should not overlap with existing authorities.
+
+Regarding the regulation of the AI we have some key issues:
+\begin{itemize}
+    \item We already have some laws about AI but they should be fixed and contextualized. An example of contextualization of human supervision is the bank and loan case: if the machine says "no loan" and the operator still provides the loan, if the person doesn't pay his loan it's the operator's fault. If instead the machine says "loan", the operator gives it and the person doesn't pay, it's the machine's fault. You can't supervise the machine if you are not in a position to decide freely without any risks of liability, otherwise the position will always be conservative. 
+    It's an example of contextualization because the idea of human supervision already exists in other context but in the field of AI it must be contextualized, so we need specific regulations.
+    \item Another relevant aspect not included in the AI act is the collective dimensions, which we already discussed.
+    \item Problem of how to regulate AI. There are different kind of tools and also different approaches in terms of granularity. You can create a principle based regulation, or a sector specific regulation. 
+    \item Innovation change: to write and apply a law we need many years, but the innovation doesn't wait, so when the law that we are writing will be applicable we don't know if the framework is still the same. The system should be flexible to be updated and integrated according to the change of technology. We prefer a system called \textbf{co-regulation}, in which we have \textit{hard laws} and \textit{soft laws} that complement the hard laws in their framework. This means that a violation of a soft law includes a violation of the hard law. The positive part is that soft laws can be changed easily without going back to the legislative body. This makes easier to update the framework, but at the same time we need a framework that fixes some parameters and doesn't change every year.
+\end{itemize}
+
+There are many actors for the regulation of AI:
+\begin{itemize}
+    \item Council of Europe;
+    \item OECD (Organisation for Economic Co-operation and Development);
+    \item ICDPPC (International Conference of Data Protection and Privacy Commissioners);
+    \item European Commission's High Level Expert group on AI, Ethics guidelines. 
+\end{itemize}
+
+The High Level Expert group on AI was created by the EU commission. Closer to stakeholders groups. The level of independence and expertise is not so high. They decided to divide in subgroups, each working on a subject.The document obtained, \textit{Ethics Guidelines}, was focused on ethics. Data ethics is considered a good answer because AI is new, so it's difficult to make laws. A good thing is to start from ethics and general principles and then move to law. In framing this they created the idea of "Trustworthy AI" as a lawful, ethical and robust AI. Some mistakes are that:
+\begin{itemize}
+    \item It's based on the relational dimension, but this relationship can be easily manipulated because of good marketing, trust in the company, etc. It doesn't define the basis of this trust.
+    \item There is not an idea about the ethical framework. They say that it's based on human rights, but ethics is not based on human rights, it's the opposite.
+    \item Confusion between ethical and legal framework. In fact, there are 7 ethical key requirements for trustworthy AI, but they already are in the law, so they are not ethical values. This is a mistake because companies can not respect ethical principles but have to respect the law. This can create confusion and abuses.
+    \item The origin of these principles is not clear. If no origin is linked, then who decides if one ethical approach is better than another?
+\end{itemize}
+
+In IEEE's \textit{Ethically Aligned Design}, they still talked about ethics, law and social issues. There is still an overlapping between law and ethics but the border is clearer than the previous document.
+
+OECD's \textit{Recommendation of the Council on AI} proposes again the trustworthy AI concept but the principles are still the same.
+
+In the end, just giving principles is useless because they are subject to interpretation and can be implemented in different ways. This was tried to do in the CoE \textit{Guidelines on AI and data protection}. This work is very pragmatic. For instance for the issue concerning anonymization and data minimization, the  proposed solution is to use synthetic data. Or for the risk of decontextualization, it's said to consider if data is in the right context or if an existing model can be used in another context. (already talked about decontextualization before)
+
+\subsubsection{Key concepts for AI regulation}
+One of the most important proposals that is being discussed is the European Commission's \textit{White paper on Artificial Intelligence}. It is suggested to reconsider the focus on ethics and to approach the problem with hard laws. The suggestion was to revise the existing legal framework. It will use the GDPR as a starting point.
+Some key elements are: 
+\begin{itemize}
+    \item \textbf{Proportionality}, so we don't need to regulate all the AI in the same way because regulation should be proportionate to the risk.
+    \item \textbf{Risk management}, because if we have different laws for different AIs, in the same way we have to conduct a different risk management and risk assessment.
+    \item \textbf{Participation}: the participation problem is not in the proposal but it's a part of the debate. AI in the social context needs participation, also for design and acceptability of some technologies. If you shape society through AI you have to engage people.
+    \item \textbf{Transparency}: an overestimated problem is transparency, because it's not clear what is the target:
+    \begin{itemize}
+        \item the authorities?
+        \item the users? but they can not understand the technology.
+        \item about the training data?
+        \item about the algorithm?
+    \end{itemize}
+    For this reason transparency should be carefully implemented because it must be precisely defined.
+\end{itemize}
+
+\subsubsection{Act proposal}
+To try to solve these issues we have an act proposal. For now it's a draft that potentially changes every month. From the beginning we have some difficulties, like how to define a AI. Some scholar try to propose that an AI can be defined based on which is the scope/task that it will solve, so what the AI can do. You have to provide a definition to define the scope of the regulation (consistent with UK approach, in continental experience we use dictionary definition). It's good because you clearly define what is under regulation and what is not, but it's always evolving. So the proposal is to narrow the definition to leave something out, but the most important aspect is the impact of the technology on society, not the definition itself, so a broader definition might be better. Many companies prefer a narrow definition.
+
+Another important issue is to define what we mean for high risk and where is the threshold. For example we can have a low risk AI but if everyone uses it, the risk could become high, so we should focus not only on high risk but also on the impact on rights and freedom. Also the decision to regulate high risk application is justified by the fact that if we regulated all AIs we would impact an entire sector, which is relatively young.
+In the previous chapters we saw that in GDPR we must make a risk assessment, so it's up to the company to evaluate and manage the risk that an application can have. In this case, instead, the law decided to set the high risk, so it's a \textbf{legislative based approach} in which the context is not considered. In fact the act lists the prohibited AI practices (art. 5) and the high risks sector (art.6, annex III). This sector approach raises some concerns because many applications are cross-sector applications. Also some applications considered high risk have a really low impact on human rights, for example an AI that performs a screening of candidates and eliminates those who don't have any key component for the job. Furthermore, these risks are static but AI is very dynamic. The list of high risks is given and was not justified to explain why certain cases are in the list and others are not. We can imagine them based on the criteria given in Article 7, because if you want to amend the list you must respect them, but we don't really know.
+
+Another strange thing is that in art.7 it is stated that the body that can amend the list of high risk is the Commission, which is  the executive branch, not the legislative one. The right thing would be to give the amendment power to the Parliament or to the Parliament, Commission and the other bodies.
+
+Another peculiar thing is that while in GDPR we had to lower the risk of a high risk application, here we have a list of banned applications and a list of high risk applications which we choose to accept with the adoption of appropriate mitigation measures, but the text is still not clear about human rights.
+
+Also this is a regulation, which are usually created to harmonize national level laws. In this case there are no existing laws, so it's a shift in the paradigm. EU wants to regulate AI at European level before each country makes its own laws.
+
+There are three categories in the AI act proposal:
+\begin{itemize}
+    \item two categories already regulated by safety rules;
+    \item annex III which is something new and open.
+\end{itemize}
+The effect for the part covered by laws is the human rights impact assessment, while for the rest it's all new because we introduce conformity and human rights assessment.
+We can say that there are three lists:
+\begin{itemize}
+    \item Red lines: prohibited uses;
+    \item Blacklist: classification based on existing product security regulations;
+    \item Grey list: specific cases defined in the Regulation and by the European Commission (Annex III).
+\end{itemize}
+If this is the framework, we can think that there are missing:
+\begin{itemize}
+    \item Flexibility: a list that can be amended by the commission is not the best thing in technology, since, particularly this technology, is always changing. Justified only on the political perspective to limit the impact on AI sector.
+    \item Open clause (role of AI manufacturer): if the list is not so clear it can create discussion from the manufacturers about the belonging to the list. Also you have to interpret the category and the interpretation can be manipulated in order to exclude the application from the risks. 
+    \item Decentralized approach: the picture is more complicated because some parts are also demanded to national authorities and the role of the commission is complicated.
+\end{itemize}
+Some considerations we can make are:
+\begin{itemize}
+    \item A complicated model
+    \item An industry risk management approach more focused on product safety than on rights/freedoms.
+    \item A model over-prescriptive in some cases (high risk list) and too soft in other cases (cases not included in the lists)
+\end{itemize}
+
+What is interesting is that in both the AI act and in the proposal of the council of Europe there is a reference to the impact on human rights as a criteria to accept or not AI applications, but not a model for human rights impact assessment. In data protection we had a model. In this case there are no models because there already exist models in general or in data protection. There are scholars who suggest to use DPIA (art 35), in particular to expand DPIA to HRIA. This is a risk because DPIA relies on the mindset of data protection and does not grab the complexity of human rights. We could use human rights impact assessment, but there are problems, in fact existing models have been created for different kinds of applications, such as business, large scale projects, etc. 
+The main problems are that the characteristics of existing HRIA, which are:
+\begin{itemize}
+    \item The impact is very territorial based;
+    \item ex post approach, in fact the assessment is carried out when the company raises concerns, to mitigate the effects on human rights;
+    \item very based on local activity with experts;
+    \item it's a policy tool, so the company can choose not to implement the proposed solutions
+\end{itemize}
+In AI it's different, first of all AI is not territory based.
+The assessment is ex ante, which means the risk should be assessed before putting the application on the market;
+The other difference is that AI risks are based on thresholds and the mitigation of the risks is required by the law, otherwise you might not use your application at all. In this case it should be a regulation not a policy like it is now.
+HRIA in AI is an instrument to facilitate compliance and to reduce the AI risk impact of some applications. In terms of methodology:
+\begin{itemize}
+    \item Planning and scoping
+    \item Data collection and analysis
+    \item Role of experts and participation. In carrying out impact assessment it's very important to be aware about the effects, this is not easy and requires a multidisciplinary approach.
+\end{itemize}
+The key factors to consider during the impact assessment are:
+\begin{itemize} 
+    \item first step should be risk identification, but it should not be a problem because we don't detect new risks but the ones on human rights.
+    \item likelihood, based on probability of adverse consequences
+    \item serverity: gravity of the prejudice and the effort to overcome it and to reverse adverse effects
+\end{itemize}
+we use a 4 levels scale to avoid risks of averaging positions:
+there are four variables, which are:
+\begin{itemize}
+    \item probability and exposure for likelihood;
+    \item gravity and effort for severity
+\end{itemize}
+based on the value of these variables there are tables which use cardinal scales and not multiplications. Finally there is an expert based evaluation that assesses the combined risk. The levels are for all the variables Low, Medium, High, Very high. 
+A final evaluation is performed instead of just averaging the risks because for example a high impact on freedom of expression and a lower impact on another right still makes the application high risk.
+
+\subsection{AI regulation and Data ethics}
+ethics was very supported by companies because they adopted.
+the problem in creathin ethicaò codes, is that they were based on general principle, transparency, no harm,..
+\begin{itemize}
+    \item they were already in the law
+    \item so vague that they were difficult to be implemented
+\end{itemize}
+
+there are many diferent approaches, some use internal boards, some use external advisors, etc.
+
+not clear level of compliance,
+ethics used as marketing options (ethic washing) you can say that you are an ethical ai company because you use a ethic code but not evidence of using
+
+role of ethics in the debate is important, long history between law, ethichs and technology. originally something external to technology, so focus on what is bad and good in technology. main aspect was for evaluation of technology, tech was given as neutral, this was a mistake so approach changed. tech already embeds choices of ethics, technologies are non neutral, they enable some behaviour or entail some decisions. for example technologies to have information about the fetus. before people were unaware of any problems, now people may think to have an abortion after obtaining knowledge, which is an ethical issue.
+at the same time shapes how we see the world. ai algorithms give a picture of what they understood through data, so it might not be the real representation of the world, for example boston street bump case. our knowledge is in manyb cases mediated through technology.
+
+an important point is awareness that tech is not neutral, you can shape tech and tech shapes you. this is the technology mediation theory, values are (intentionally or not) embedded in the devices/services. So if you adopt an ethical mindset, it is not necessarily the same ethical mindset for everyone.
+
+Regarding the relationship between law and ethics, law is based on ethics, but in terms of regulation, if ethical principle is in the law we narrow the principle.
+
+the main problem in using ethics for regulation is that ethics entails a social dimension, approach of a community, but each community has its approach, so very context dependent. common approach in human rights but there is no universal ethics.
+
+another issue transplant of ethical values, when you take a principle from a context and use it in another. for example principles of medical ethics have been extended to AI.
