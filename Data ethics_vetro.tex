@@ -224,3 +224,48 @@ They should be chosen by the situation.
 What are the principles and the values that you follow when you choose one paradigm or the other? Usually values shape the rules that are then implemented. For example assigning or denying loans could be decided by different underlying values, for example safeguard of lender's capital, effect on environment, etc. Then they determine what are the rules, for example to safeguard the lender's capital, you could take a debt/income less than x\%, or value or properties already owned by him or relatives. Finally the rules are implemented.
 
 FOR THE EXAM, explain why a discrimination occurs or what are the risk factors. could you imagine a different goal for the algorithm? for example for compas case, it could be used for policy makers, where arrests/criminality is a problem.
+
+\subsection{Fairness Qualitative Assessment}
+We have \textbf{algorithm audit}:
+\begin{itemize}
+    \item bias audit: overall approach to assess bias in algorithm and dataset. It is an ex-ante approach.
+    \item regulatory approach: ex-post approach to check compliance with regulations and norms of the algorithms developed.
+\end{itemize}
+On the other hand we have \textbf{algorithmic impact assessment}, to understand if there is an impact of the algorithm. 
+\begin{itemize}
+    \item algorithmic risk assessment, which is done ex-ante, in this course we focus on discrimination but there are broader impacts, like environmental impact, for example to train a model there is an impact on the environment.
+    \item algorithmic impact evaluation, which is ex-post. The tools we will see are for risk assessment but they can be used also for impact evaluation, depending if we use before or after production.
+\end{itemize}
+Regarding \textbf{fairness assessment}, it is a methodology to identify issues of fairness connected with power asymmetry. It can be performed before or after deployment by developers, policymakers, students. The more you have input from impacted stakeholders the better it is, because you can be much more precise instead of making hypothesis. 
+The assessment is based on four questions, that are:
+\begin{enumerate}
+    \item What social conflict arises from the design/operation of a system? 
+    \item What constituencies are adversely affected by this conflict? How?
+    \item What social interests are at stake in this case?
+    \item How could the conflict be resolved fairly?
+\end{enumerate}
+\subsubsection{What social conflict arises from the design/operation of a system?}
+We will use the Taylor Russel diagram (confusion matrix). The example is the saferroute system, that uses police historical data to improve the safety of the city. You have a navigator that suggests you the safest route and avoids going through areas with highest percentage of crimes. The same data used in the predictive policing case can be used to predict the best route. The confusion matrix can be analyzed to check if safe areas were incorrectly classified as dangerous and vice versa. Some criticalities we can think of are:
+\begin{itemize}
+    \item What are the thresholds to determine if an area is safe or dangerous or what is the denominator of the probability calculations.
+    \item what is the construct we are measuring, that is what kind of criminality are we measuring
+    \item finally, it inherits the limitations of predictive policing, such as the bias involved in the measurements is fed in the algorithm.
+\end{itemize}
+\subsubsection{What constituencies are adversely affected by this conflict? How?}
+First of all we define who are stakeholders, that can be classified in:
+\begin{itemize}
+    \item \textbf{direct} stakeholders, which are the users, that means a person that uses the technology.
+    \item \textbf{indirect} stakeholder, which are other persons that don't interact with the application but might be impacted by it.
+\end{itemize}. 
+In saferroute the \textit{direct stakeholders} can be all those that are new to the city or women who can be physically vulnerable. An intersection could be female students. 
+
+The \textit{indirect stakeholders} are people or businesses living or operating in the dangerous areas or police that are in the involved areas. Indirect stakeholders can also be people in safe areas because criminals could move to safe areas due to less control. 
+Given the stakeholders, how could they be adversely affected? 
+\begin{itemize}
+    \item \textbf{False positives} can cause a reputation damage to the misclassified area, potentially labeling as "ghetto", thus making residents' properties lose value or making businesses lose clients.
+    \item \textbf{False negatives} affect users that are routed through safe areas but are assaulted.
+\end{itemize}
+This tools allows us to understand the negative effects of the usage of the application. 
+\subsubsection{What social interests are at stake in this case?}
+Given that we identified the negative impacts, now we ask what are the social interests at stake. We have to think in terms of values, which are principles or standards of a person or society. Personal/societal judgement of what is valuable in life. For example, the MIT moral machine where you are asked to decide who to save in a autonomous driving scenario.
+\subsubsection{How could the conflict be resolved fairly?}
