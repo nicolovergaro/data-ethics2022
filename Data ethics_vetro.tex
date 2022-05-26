@@ -267,5 +267,30 @@ Given the stakeholders, how could they be adversely affected?
 \end{itemize}
 This tools allows us to understand the negative effects of the usage of the application. 
 \subsubsection{What social interests are at stake in this case?}
-Given that we identified the negative impacts, now we ask what are the social interests at stake. We have to think in terms of values, which are principles or standards of a person or society. Personal/societal judgement of what is valuable in life. For example, the MIT moral machine where you are asked to decide who to save in a autonomous driving scenario.
+Given that we identified the negative impacts, now we ask what are the social interests at stake. We have to think in terms of values, which are principles or standards of a person or society. Personal/societal judgement of what is valuable in life.
+
+In this course we focus on human welfare values (education, health, income), since automation and automated decision making is proceeding very fast in these fields. A concrete example of values is for example, the MIT moral machine where you are asked to decide who to save in a autonomous driving scenario.
+Some examples of values are:
+\begin{itemize}
+    \item Autonomy: people's ability to decide, plan and act. This is for example in contrast with nudging that we see in apps nowadays.
+    \item Trust: expectation that exists between people.
+    \item Usability: making all people successful users of technology, for example technology that can be used by people with disabilities.
+    \item Informed consent: achieving an effective agreement on the usage of personal data.
+\end{itemize}
+Some values come from IT world, other come from philosophy. Values in software can be: 
+\begin{itemize}
+    \item \textbf{Explicitly supported} in the form of design constraints, requirements, business principles.
+    \item \textbf{Designer values}, personal or professional values that a designer brings into the design of a tool, which are not necessarily aligned with the company (e.g. Google, an employee stopped a project involved with the military
+    \item \textbf{Stakeholder values}, for example the values we saw in saferroute case. Usually these values are inferred via business surveys or directly asked through participatory design principles: asking representatives of stakeholders to give a feedback to the application. In particular this approach is called  human centered AI, and it's useful because the more diverse the feedback is the better it is for the application.
+\end{itemize}
+To understand what interests are at stake in saferroute we check the confusion matrix and focus on the errors. When we have a false negative we are going against the value of personal safety of the user. With false positives, the more you are going against the values of economic and reputation security, the less happy residents and businesses will be to live in a not safe area. 
 \subsubsection{How could the conflict be resolved fairly?}
+For example we could:
+\begin{itemize}
+    \item solicit public feedback from the design phase
+    \item also reason with the population what could be the best way to signal danger
+    \item enable software error reports
+\end{itemize}
+You might decide to give priority to one value or make a compromise, for example if you value more safety you should tune the predictor to be more conservative as possible.
+
+FOR THE EXAM, theory about the methodology (how is the fairness assessment organized?) or a piece of the case could have a secondary question about the methodology (what are other stakeholders not cited in the text?). not apply the methodology.
