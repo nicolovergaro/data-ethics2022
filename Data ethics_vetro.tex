@@ -294,3 +294,49 @@ For example we could:
 You might decide to give priority to one value or make a compromise, for example if you value more safety you should tune the predictor to be more conservative as possible.
 
 FOR THE EXAM, theory about the methodology (how is the fairness assessment organized?) or a piece of the case could have a secondary question about the methodology (what are other stakeholders not cited in the text?). not apply the methodology.
+
+\subsection{Measuring balance in datasets}
+Imbalance is a disproportion of occurrences of a given class in a dataset. For example in the COMPAS case there was a disproportion in the sensitive attribute "race". A disproportion in a sensitive attribute can cause discrimination. Balance measures will be applied to the training set, to measure if there is a risk of discrimination; Fairness measures, on the other hand, will be considered in the testing phase.
+
+The measures we will look at are measures on categorical data, because most of the data on sensitive attributes is categorical or is made categorical, for example age is continuous but it's often divided in intervals. The measures are:
+\begin{itemize}
+    \item Gini index: to measure heterogeneity. 
+    \item Simpson index: to measure diversity.
+    \item Imbalance ratio: the only measure that comes from machine learning. Used to measure imbalance
+\end{itemize}
+\subsubsection{Heterogeneity}
+How many different types are represented in a dataset. It comes from different disciplines. The higher the heterogeneity (close to 1) the more equal are the frequencies, so the more balanced is the dataset. With lower values, frequencies are concentrated in a few classes. The most important measure is the \textbf{Gini-Simpson index}, that should not be confused with the Gini index in Economics. Computed as:
+$$
+    G = 1 - \sum_i^m f_i^2
+$$
+Where we have all the relative frequencies $\left(f_i = \frac{n_i}{\sum_i^m n_i}\right)$ squared and summed. It goes from the minimum heterogeneity where G=0 to the maximum $G=\frac{m-1}{m}$. We can then normalize the index obtaining:
+$$
+G_n = \frac{m}{m-1}\left(1 - \sum_i^m f_i^2 \right)
+$$
+We normalize because we want this measure to be comparable to others. In the calculations if some class contains 0 elements we can decide to count or not to count them in the number of classes, but we must keep this decision consistent also for other measures.
+The Gini index is \textit{superlinear}.
+\subsubsection{Diversity}
+We take from other domains, provides information about how diverse a community is. We see the \textbf{Simpson diversity index}:
+$$
+    D = \frac{1}{\sum_i^m f_i^2}
+$$
+It represents the probability of belonging to different classes. Higher values of Simpson index indicate higher diversity, so balance is higher.
+The minimum value, which means the lowest diversity, so there is only one class, is 1, the maximum value is m. In this way we can normalize the index, which becomes:
+$$
+    D_n = \frac{1}{m-1} \left(\frac{1}{\sum_i^m f_i^2} -1 \right)
+$$
+The Simpson index is \textit{almost linear}.
+\subsubsection{Imbalance}
+The \textbf{Imbalance Ratio} (IR) is widely used in machine learning. It is the ratio between the highest and the lowest frequency:
+$$
+    I = \frac{\max f_i}{\min f_i}
+$$
+If you take into account 0 as min frequency it goes to infinity, so in general we don't count the classes that don't have occurrences. 
+
+The minimum and the maximum are both 1, so we take the inverse to make it coherent with other indexes. Also because we want to measure balance, not imbalance.
+$$
+    I = \frac{\min f_i}{\max f_i}
+$$
+The Imbalance Ratio index is \textit{sub linear}, so it goes to 0 very quickly as it's very reactive to imbalanced situations. For example if we have m-1 classes with similar values, and 1 class that has a really low value, the index will immediately show it.
+\subsection{Source of bias: an overview}
+We are not speaking about statistical bias, when the expected value of a an estimator is the estimator itself. In this case we talk about bias in software systems: computer systems that systematically and unfairly discriminate against certain individuals or groups of individuals in favor of others by denying an opportunity for a good or assigning an undesirable outcome to an individual or groups of individuals that are unreasonable or inappropriate.
