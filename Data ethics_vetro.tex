@@ -339,4 +339,91 @@ $$
 $$
 The Imbalance Ratio index is \textit{sub linear}, so it goes to 0 very quickly as it's very reactive to imbalanced situations. For example if we have m-1 classes with similar values, and 1 class that has a really low value, the index will immediately show it.
 \subsection{Source of bias: an overview}
-We are not speaking about statistical bias, when the expected value of a an estimator is the estimator itself. In this case we talk about bias in software systems: computer systems that systematically and unfairly discriminate against certain individuals or groups of individuals in favor of others by denying an opportunity for a good or assigning an undesirable outcome to an individual or groups of individuals that are unreasonable or inappropriate.
+We are not speaking about statistical bias, when the expected value of a an estimator is the estimator itself. In this case we talk about bias in software systems: computer systems that \textbf{systematically} and \textbf{unfairly} discriminate against certain individuals or groups of individuals in favor of others by denying an opportunity for a good or assigning an undesirable outcome to an individual or groups of individuals that are unreasonable or inappropriate.
+\subsection{Taxonomy of bias in 1996}
+\begin{itemize}
+    \item Preexisting bias
+    \begin{itemize}
+        \item Individual
+        \item Society 
+    \end{itemize}
+    \item Bias in technology
+    \begin{itemize}
+        \item Computer tools
+        \item De-contextualized algorithms
+        \item Random number generation
+        \item Formalization of human constructs 
+    \end{itemize}
+\end{itemize}
+\subsubsection{Sources of bias in a typical ML process}
+In a typical ML process there are many steps in which we can inject bias. We can see how the process evolves and in italic the biases.
+The relation between X and Y (\textit{Historical}) is what we want to learn. Through measurements steps we can have a sample (\textit{Representation}). We then select features and labels (\textit{Measurements}) and obtain two estimates of X and Y. The relationship between these two estimates is the learnt function (\textit{Aggregate}). Finally we have a measure of success and we evaluate what we learnt to other data (\textit{Evaluation}).
+\begin{itemize}
+    \item Historical bias, represents inequalities and disproportions in the real world.
+    \item Representation bias, introduced through sampling/measurements. For example when we don't measure all the population, when there are changes in the population not detected or the Simpson Paradox. Practical examples are slangs in social networks or training an image classifier not considering all the domain.
+    \item Measurement bias, which is introduced when performing selections. For example when granularity and quality of data vary across groups. For example the lack of historical data for people that moved to a new country, or feature selection by subjective choices. Another example is the selection of proxy variables. A practical example is having richer traffic data on urban areas than rural areas.
+    \item Aggregation bias, that arises in the relationship between the features and the target attribute. For example when using clinical tools that might need a different parametrization for specific ethnic groups or reviews on web platforms that might be influenced by past reviews (people tend to confirm past reviews).
+    \item Evaluation bias, when training data is very different from evaluation data or when evaluation data don't represent the true distribution of the population. For example a facial recognition system mostly trained on white faces and used/evaluated on other skin colors.
+\end{itemize}
+\subsection{ACM code of ethics and professional conduct}
+ACM stands for Association for Computing Machinery. It is based on four parts:
+\begin{enumerate}
+    \item Describes general ethical principles of a computing professional;
+    \item Professional responsibilities. More practical than ethical principles
+    \item Specific responsibilities for those who have leadership, such as managers.
+    \item How to be compliant and what happens if you don't comply.
+\end{enumerate}
+This is a drastic change in focus, in fact the first line says that "Computing professionals' actions change the world.[...] They should reflect upon the impact of their work, consistently supporting the public good.". 
+
+Addressed to everyone involved in computing, firstly practitioners, that are people who work in companies.
+
+The code is not an algorithm to solve ethical problems, it just gives guidelines and principles for ethical decision making.
+\subsubsection{General ethical principles}
+\begin{itemize}
+    \item 1.1 Contribute to society and to human well-being, acknowledging that all people are stakeholders in computing. 
+    
+    You have an obligation to consider the impact of your work on society. It includes promoting fundamental human rights and each individual autonomy. 
+    
+    You have an obligation to minimize negative consequences of the tools that you are developing, such as threats to health, safety, etc.
+    When the interests of multiple groups conflict, priority should be given to the less advantaged. 
+    
+    You should consider if your work respects diversity, will be used in responsible ways and is accessible.
+    
+    You must pay attention to work in a safe natural environment, by promoting environmental sustainability.
+    \item 1.4 Be fair and take action to not discriminate. 
+    
+    You should foster fair participation of all people; discrimination based on "sensitive attributes" is a violation of the code.
+    
+    Consider the impact of new technology on inequalities, which may be enhanced. You should take action to mitigate this problem.
+    \item 1.6 Respect privacy. 
+    
+    You should take precautions to prevent re-identification of anonymized data, make sure that data is accurate, understand the provenence of data.
+    
+    Only the minimum amount of data necessary should be collected.
+\end{itemize}
+\subsubsection{Professional responsibilities}
+\begin{itemize}
+    \item 2.1 Achieve the highest possible qualities in your works.
+    \item 2.2 Mantain high standards of professional competence, conduct and ethical practice. 
+    
+    Professional competence starts with technical knowledge and awareness of the social context in which your work will be deployed. Professional competence also requires skills in communication, reflective analysis, recognizing and navigating ethical challenges.
+    \item 2.5 Give comprehensive and thorough evaluations of computer systems and their impact, including analysis of possible risks. 
+    
+    Evaluations should not only be given to employers or employees, but also to the public. \textbf{Extraordinary care} should be taken to identify and mitigate potential risks in machine learning systems and if risks are high you should consider whether to deploy the system or not. This approach is a change in focus, in fact we can see that it's not innovation first, but people first. Risk assessments should be continuous as systems evolves in use.
+\end{itemize}
+\subsubsection{Professional leadership principles}
+Recognized for both leaders that have a formal designation, but also people that are informally leaders from influence over others. 
+\begin{itemize}
+    \item 3.1 Ensure that the public good is the central concern during all professional computing work.
+    
+    You should keep this focus regardless of the methodologies and the techniques used.
+    \item 3.7 Recognize and take special care of systems that become integrated in the infrastructure of society.
+    
+    This article is included because computing systems are becoming more and more prevalent. As the level of adoption changes, the ethical responsibilities have to change as well. When appropriate standards of care do not exists, you have a duty to ensure they are developed.
+\end{itemize}
+\subsubsection{Compliance with the code}
+\begin{itemize}
+    \item 4.1: Uphold, promote and respect the principles of the code.
+    
+    The future of computing depends on both technical and ethical excellence.
+\end{itemize}
